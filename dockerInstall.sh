@@ -20,7 +20,7 @@ install_ubuntu() {
        cd /var/lib
        rm -rf docker
     else
-       echo "docker is not installed.. continue to install"
+       echo "NO DOCKER PACKAGES FOUND... INSTALLING DOCKER...."
     fi
 
 
@@ -52,7 +52,7 @@ install_centos() {
        rm -rf docker
        yum clean
     else
-       echo "docker is not installed... continue to install"
+       echo "NO DOCKER PACKAGES FOUND... INSTALLING DOCKER...."
     fi
 
     sudo yum install -y yum-utils   ## device-mapper-persistent-data lvm2
