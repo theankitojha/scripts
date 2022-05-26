@@ -1,4 +1,13 @@
 #!/bin/bash
+######################################################################
+##
+##   Terraform Installation Script
+##   Written By: Ankit Ojha
+##   URL: 
+##   Update on: May 27, 2022
+##
+######################################################################
+
 
 if [ -f /etc/os-release ];then
    osname=`grep ID /etc/os-release | egrep -v 'VERSION|LIKE|VARIANT' | cut -d'=' -f2 | sed -e 's/"//' -e 's/"//'`
