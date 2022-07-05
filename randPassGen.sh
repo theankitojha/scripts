@@ -1,6 +1,13 @@
 #!/bin/bash
 
-#Random Password Generator
+######################################################################
+##
+##   Random Password Generator
+##   Written By: Ankit Ojha
+##   URL: ankitojha.com.np
+##   Update on: July 5, 2022
+##
+######################################################################
 
 echo "!! STRONG RANDOM PASSWORD GENERATOR !!"
 
