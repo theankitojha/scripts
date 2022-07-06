@@ -17,9 +17,8 @@ MONGO_HOST='localhost'
 MONGO_PORT='27017'
 MONGO_USER='root'
 MONGO_PASSWORD='password'
-DATABASE_NAME='prj_blockstuffs'
+DATABASE_NAME='database'
 AUTH_DB='admin'
-BACKUP_RETENTION_DAYS=30 #Number of days to keep local backup
 
 mkdir -p ${DB_BACKUP_PATH}/${DATABASE_NAME}/${TODAY}
 
