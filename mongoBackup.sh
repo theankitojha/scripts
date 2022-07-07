@@ -9,6 +9,9 @@
 ##
 ######################################################################
 
+# DECLARE NECESSARY VARIABLES HERE:
+###################################
+
 TODAY=`date +%d%b%Y`
 
 DB_BACKUP_PATH='/home/ubuntu/db-backups'
@@ -17,9 +20,11 @@ MONGO_PORT='27017'
 MONGO_USER='root'
 MONGO_PASSWORD='password'
 AUTH_DB='admin'
-BACKUP_RETENTION_DAYS=30 #Number of days to keep local backup
+BACKUP_RETENTION_DAYS=30 # Specifies the number of days to keep the local backup
 
 
+# ARRAY FOR LIST OF DATABASES:
+##############################
 
 declare -a databaseNames=(
 
@@ -50,4 +55,15 @@ done
                 exit 1
         fi
 
+# DELETE THE DATABASE BACKUP, IF OLDER THAN 30 DAYS:
+####################################################
+
+DBDELDATE=`date +"%d%b%Y" --date="${BACKUP_RETAIN_DAYS} days ago"`
+
+if [ ! -z ${DB_BACKUP_PATH} ]; then
+      cd ${DB_BACKUP_PATH}
+      if [ ! -z ${DBDELDATE} ] && [ -d ${DBDELDATE} ]; then
+            rm -rf ${DBDELDATE}
+      fi
+fi
 
