@@ -1,6 +1,6 @@
 # scripts
 
-##To run the script:
+## To run the script:
 
 chmod u+x script.sh
 
